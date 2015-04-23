@@ -1,7 +1,10 @@
 require "fetch_app/version"
 require 'rest-client'
 require 'json'
+require 'fetch_app/show'
 module FetchApp
+
+  include CommandLineReporter
   ANDROID_BASE_URL = 'http://www.wandoujia.com/apps/'
   IOS_BASE_URL = 'http://itunes.apple.com/lookup?country=cn&'
   # Your code goes here...
@@ -92,7 +95,10 @@ module FetchApp
       rescue Exception => e
         raise e
       end
+    end
 
+    def show_table
+      Show.new.run
     end
 
   end
