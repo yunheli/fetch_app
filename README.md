@@ -1,6 +1,14 @@
 # FetchApp
 
-TODO: Write a gem description
+* 根据应用的id查询应用的gem
+* 应用限于安卓应用和苹果应用
+
+
+``
+  FetchApp.fetch_app('ios','**.**')
+  FetchApp.fetch_ios('**.**')
+  FetchApp.fetch_android('**')
+``
 
 ## Installation
 
