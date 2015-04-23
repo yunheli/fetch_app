@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = FetchApp::VERSION
   spec.authors       = ["Will"]
   spec.email         = ["yh@fir.im"]
-  spec.summary       = %q{one gem fetch app.}
-  spec.description   = %q{one gem to fetch app.}
-  spec.homepage      = ""
+  spec.summary       = %q{一个根据应用APPID抓取应用的GEM包.}
+  spec.description   = %q{一个根据应用APPID抓取应用的GEM包.}
+  spec.homepage      = "https://rubygems.org/gems/fetch_app"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
