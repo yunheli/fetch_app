@@ -16,7 +16,20 @@ module FetchApp
         return nil
       end
 
-      self.send("fetch_#{type}",bundle_id)
+      begin
+        data = self.send("fetch_#{type}",bundle_id)
+        Show.new(
+          data.fetch(:name),
+          data.fetch(:app_id),
+          data.fetch(:desc),
+          data.fetch(:gener),
+          data.fetch(:link),
+          data.fetch(:version)
+        ).run()
+      rescue Exception => e
+        puts e
+      end
+
     end
 
     def fetch_ios bundle_id=""
@@ -95,10 +108,6 @@ module FetchApp
       rescue Exception => e
         raise e
       end
-    end
-
-    def show_table
-      Show.new.run
     end
 
   end
